@@ -11,10 +11,10 @@ export default function App() {
       <Header />
       <SearchGallery setTitulo={setTitulo} />
       <Categorias setTitulo={setTitulo} />
+      <GaleriaFotos />
       <h2 className="font-sans md:text-3xl font-bold text-[#051b37] md:mt-12">
         {titulo}
       </h2>
-      <GaleriaFotos />
     </div>
   );
 }
