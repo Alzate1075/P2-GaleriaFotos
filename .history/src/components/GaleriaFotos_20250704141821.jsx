@@ -27,15 +27,16 @@ export default function GaleriaFotos() {
   }
 
   return (
-    <div className="w-[70%] md:w-full md:max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4">
+    <div className="w-[50%] items-center justify-center grid grid-cols-1 md:grid-cols-4 gap-4 p-4 object-cover">
       {fotos.map((foto) => (
         <img
           key={foto.id}
           src={foto.src.medium}
           alt={foto.alt}
-          className="rounded shadow-lg w-full h-48 md:h-40 object-cover"
+          className="rounded shadow-lg"
         />
       ))}
+      console.log(data.photos[0]);
     </div>
   );
 }

@@ -11,13 +11,13 @@ export default function Categorias({ setTitulo }) {
       </button>
       <button
         onClick={() => setTitulo("Beaches Pictures")}
-        className="cursor-pointer md:w-24 h-7 flex items-center justify-center font-sans font-semibold bg-[#051b37] text-white rounded "
+        className="cursor-pointer md:w-24 md:h-7 flex items-center justify-center font-sans font-semibold bg-[#051b37] text-white rounded "
       >
         Beaches
       </button>
       <button
         onClick={() => setTitulo("Birds Pictures")}
-        className="cursor-pointer md:w-24 h-7 flex items-center justify-center font-sans font-semibold bg-[#051b37] text-white rounded "
+        className="cursor-pointer md:w-24 md:h-7 flex items-center justify-center font-sans font-semibold bg-[#051b37] text-white rounded "
       >
         Birds
       </button>
