@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 export default function App() {
   const [titulo, setTitulo] = useState("Mountain Pictures");
   const [fotos, setFotos] = useState([]);
-  const [buscarT, setBuscarT] = useState("");
+  const [buscarT = { buscarT }, setBuscarT = { setBuscarT }] = useState("");
 
   useEffect(() => {
     fetchData();
@@ -33,14 +33,9 @@ export default function App() {
   }
 
   return (
-    <div className="font-poppins min-h-screen flex flex-col items-center">
+    <div className="font-poppins bg-gray-100 min-h-screen flex flex-col items-center">
       <Header />
-      <SearchGallery
-        setTitulo={setTitulo}
-        buscarT={buscarT}
-        setBuscarT={setBuscarT}
-        buscarFotos={fetchData}
-      />
+      <SearchGallery setTitulo={setTitulo} />
       <Categorias setTitulo={setTitulo} />
       <h2 className="font-sans text-3xl font-bold text-[#051b37] m-8 md:mt-12">
         {titulo}

@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 export default function App() {
   const [titulo, setTitulo] = useState("Mountain Pictures");
   const [fotos, setFotos] = useState([]);
-  const [buscarT, setBuscarT] = useState("");
+  const [buscarT, setBuscarT] = useState(""); // 👉 CORRECTO
 
   useEffect(() => {
     fetchData();
@@ -33,7 +33,7 @@ export default function App() {
   }
 
   return (
-    <div className="font-poppins min-h-screen flex flex-col items-center">
+    <div className="font-poppins bg-gray-100 min-h-screen flex flex-col items-center">
       <Header />
       <SearchGallery
         setTitulo={setTitulo}

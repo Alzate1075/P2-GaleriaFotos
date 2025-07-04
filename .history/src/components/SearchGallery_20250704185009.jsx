@@ -13,7 +13,7 @@ export default function SearchGallery({ buscarT, setBuscarT, buscarFotos }) {
 
       <button
         onClick={buscarFotos}
-        className="border-3 border-gray-300 md:border-0 cursor-pointer md:bg-gray-100 text-white px-4 py-1 md:py-2 rounded-r hover:bg-[#051b37]"
+        className="border-3 border-[#051b37] md:border-0 cursor-pointer bg-gray-100 text-white px-4 py-1 rounded-r hover:bg-[#051b37]"
       >
         <img src="/search-icon.svg" alt="Buscador" />
       </button>

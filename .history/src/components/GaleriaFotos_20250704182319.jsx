@@ -1,6 +1,7 @@
 import React from "react";
+import React, { useEffect, useState } from "react";
 
-export default function GaleriaFotos({ fotos }) {
+export default function GaleriaFotos() {
   return (
     <div className="w-[70%] md:w-full md:max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 p-4">
       {fotos.map((foto) => (
