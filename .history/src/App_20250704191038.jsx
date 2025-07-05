@@ -4,11 +4,9 @@ import Categorias from "./components/Categorias";
 import GaleriaFotos from "./components/GaleriaFotos";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Spinner from "./components/Spinner";
 
 export default function App() {
   const [titulo, setTitulo] = useState("Mountain Pictures");
-  const [loading, setLoading] = useState(false);
   const [fotos, setFotos] = useState([]);
   const [buscarT, setBuscarT] = useState("");
 
@@ -27,12 +25,10 @@ export default function App() {
           },
         }
       );
-      setTitulo(`${query.charAt(0).toUpperCase() + query.slice(1)} Pictures`);
+      console.log(data);
       setFotos(data.photos || []);
     } catch (error) {
       console.error(error);
-    } finally {
-      setLoading(false);
     }
   }
 
@@ -49,7 +45,7 @@ export default function App() {
       <h2 className="font-sans text-3xl font-bold text-[#051b37] m-8 md:mt-12">
         {titulo}
       </h2>
-      {loading ? <Spinner /> : <GaleriaFotos fotos={fotos} />}
+      <GaleriaFotos fotos={fotos} />
     </div>
   );
 }

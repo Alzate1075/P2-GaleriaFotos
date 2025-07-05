@@ -8,11 +8,6 @@ export default function SearchGallery({ buscarT, setBuscarT, buscarFotos }) {
         placeholder="Search..."
         value={buscarT}
         onChange={(e) => setBuscarT(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.key === `Enter`) {
-            buscarFotos(buscarT);
-          }
-        }}
         className="border-3 border-gray-300 bg-gray-100 rounded-l px-4 py-2 w-2xs md:w-[400px] focus:outline-none border-r-0"
       />
 

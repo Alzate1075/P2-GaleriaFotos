@@ -31,8 +31,6 @@ export default function App() {
       setFotos(data.photos || []);
     } catch (error) {
       console.error(error);
-    } finally {
-      setLoading(false);
     }
   }
 

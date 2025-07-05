@@ -8,7 +8,6 @@ import Spinner from "./components/Spinner";
 
 export default function App() {
   const [titulo, setTitulo] = useState("Mountain Pictures");
-  const [loading, setLoading] = useState(false);
   const [fotos, setFotos] = useState([]);
   const [buscarT, setBuscarT] = useState("");
 
@@ -31,8 +30,6 @@ export default function App() {
       setFotos(data.photos || []);
     } catch (error) {
       console.error(error);
-    } finally {
-      setLoading(false);
     }
   }
 

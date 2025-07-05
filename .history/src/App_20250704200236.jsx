@@ -8,7 +8,6 @@ import Spinner from "./components/Spinner";
 
 export default function App() {
   const [titulo, setTitulo] = useState("Mountain Pictures");
-  const [loading, setLoading] = useState(false);
   const [fotos, setFotos] = useState([]);
   const [buscarT, setBuscarT] = useState("");
 
@@ -23,16 +22,15 @@ export default function App() {
         {
           headers: {
             Authorization:
-              "WM5W7xLg1COodo3lwvRPmlVaCVpBeosisd5oLmAZSYXkme93CP5uTwv6",
+              "WM5W7xLg1COodo3lwvRPmlVaCVpBeosisd5oLmAZSYXkme93CP5uTwv6
+",
           },
         }
       );
-      setTitulo(`${query.charAt(0).toUpperCase() + query.slice(1)} Pictures`);
+      setTitulo(`${query.charAt(0).toUpperCase() + query.slice(1)} Pictures)`);
       setFotos(data.photos || []);
     } catch (error) {
       console.error(error);
-    } finally {
-      setLoading(false);
     }
   }
 
@@ -50,6 +48,7 @@ export default function App() {
         {titulo}
       </h2>
       {loading ? <Spinner /> : <GaleriaFotos fotos={fotos} />}
+      <GaleriaFotos fotos={fotos} />
     </div>
   );
 }
