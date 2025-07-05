@@ -49,7 +49,7 @@ export default function App() {
         buscarFotos={fetchData}
       />
       <Categorias setTitulo={setTitulo} buscarFotos={fetchData} />
-      <h2 className="flex items-center justify-center font-sans text-3xl font-bold text-[#051b37] m-8 md:mt-12">
+      <h2 className="flex items-center justify-center font-sans text-3xl font-bold text-[#051b37] m-8 md:mt-20">
         {titulo}
       </h2>
       {loading ? <Spinner /> : <GaleriaFotos fotos={fotos} />}
