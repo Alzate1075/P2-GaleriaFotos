@@ -48,7 +48,7 @@ export default function App() {
         setBuscarT={setBuscarT}
         buscarFotos={fetchData}
       />
-      <Categorias setTitulo={setTitulo} buscarFotos={fetchData} />
+      <Categorias setTitulo={setTitulo} />
       <h2 className="font-sans text-3xl font-bold text-[#051b37] m-8 md:mt-12">
         {titulo}
       </h2>

@@ -12,7 +12,7 @@ export default function Categorias({ setTitulo, buscarFotos }) {
             setTitulo(`${categoria} Pictures`);
             buscarFotos(categoria.toLowerCase());
           }}
-          className="cursor-pointer flex items-center justify-center w-90 md:w-25 h-7 font-sans font-semibold bg-[#051b37] text-white px-4 py-2 rounded"
+          className="w-6xs md:w-25 h-7 font-sans font-semibold bg-[#051b37] text-white px-4 py-2 rounded"
         >
           {categoria}
         </button>
